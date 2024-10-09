@@ -16,7 +16,6 @@ import checkAnswer from './checkAnswer';
 import DelayedBlock from './DelayedBlock';
 import {
   ANSWER_DELAY_MS,
-  INTRO_DELAY_MS,
   OUTCOMES_DELAY_MS,
   PROPOSAL_DELAY_MS,
 } from './constatns';
