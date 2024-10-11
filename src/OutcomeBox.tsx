@@ -1,11 +1,10 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-const OutcomeBox = styled.div<{ isPositive: boolean }>`
+const OutcomeBox = styled.div`
   border-radius: 8px;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
-  font-size: 48px;
-  width: 45%;
+  font-size: 26px;
 `;
 
 export default OutcomeBox;

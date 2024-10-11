@@ -1,28 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import { Congratulations } from './Congratulations';
-import ArrowDown from './ArrowDown';
-import OutcomesContainer from './OutcomesContainer';
-import OutcomeBranch from './OutcomeBranch';
-import ConfirmButton from './ConfirmButton';
-import VerticalLine from './VerticalLine';
-import FlowchartContainer from './FlowchartContainer';
-import AppContainer from './AppContainer';
-import ProposalBox from './ProposalBox';
-import OutcomeBox from './OutcomeBox';
-import InputContainer from './InputContainer';
-import Input from './Input';
-import checkAnswer from './checkAnswer';
-import DelayedBlock from './DelayedBlock';
+import AppContainer from "./AppContainer";
+import ArrowDown from "./ArrowDown";
+import checkAnswer from "./checkAnswer";
+import { Congratulations } from "./Congratulations";
 import {
   ANSWER_DELAY_MS,
+  INTRO_DELAY_MS,
   OUTCOMES_DELAY_MS,
   PROPOSAL_DELAY_MS,
-} from './constatns';
-import Typewriter from './Typewriter';
+} from "./constatns";
+import DelayedBlock from "./DelayedBlock";
+import DelayedFadeInBlock from "./DelayedFadeInBlock";
+import FlowchartContainer from "./FlowchartContainer";
+import IconButton from "./IconButton";
+import InlineInput from "./InlineInput";
+import InlineInputContainer from "./InlineInputContainer";
+import OutcomeBox from "./OutcomeBox";
+import OutcomeBranch from "./OutcomeBranch";
+import OutcomesContainer from "./OutcomesContainer";
+import PaperPlaneIcon from "./PaperPlaneIcon";
+import ProposalBox from "./ProposalBox";
+import Typewriter from "./Typewriter";
+import VerticalLine from "./VerticalLine";
 
 const MarriageProposalFlowchart: React.FC = () => {
-  const [userInput, setUserInput] = useState('');
+  const [userInput, setUserInput] = useState("");
   const [showMeme, setShowMeme] = useState(false);
 
   const handleConfirm = () => {
@@ -41,23 +44,31 @@ const MarriageProposalFlowchart: React.FC = () => {
     <>
       <AppContainer>
         <FlowchartContainer>
-          <Typewriter
-            text="Мы прошли тысячи километров навстречу друг другу, и я хочу продолжить этот путь вместе с тобой. Давай превратить нашу жизнь в бесконечное путешествие!"
-            speed={40}
-          />
+          <DelayedFadeInBlock delayMs={INTRO_DELAY_MS}>
+            <p style={{ fontStyle: "italic" }}>
+              Мы прошли тысячи километров навстречу друг другу, и я хочу
+              продолжить этот путь вместе с тобой. Давай превратить нашу жизнь в
+              бесконечное путешествие!
+            </p>
+          </DelayedFadeInBlock>
 
           <DelayedBlock delayMs={PROPOSAL_DELAY_MS}>
-            <ProposalBox>Викуся, ты выйдешь за меня?</ProposalBox>
+            <ProposalBox>
+              <Typewriter text="Викуся, ты выйдешь за меня?" speed={40} />
+            </ProposalBox>
           </DelayedBlock>
 
-          <DelayedBlock delayMs={OUTCOMES_DELAY_MS}>
+          <DelayedFadeInBlock delayMs={OUTCOMES_DELAY_MS}>
             <OutcomesContainer>
               <OutcomeBranch>
                 {/* Yes branch */}
                 <VerticalLine />
                 <div>Да</div>
                 <ArrowDown />
-                <OutcomeBox isPositive={true}>🎉💖🏖️😽👩‍❤️‍👨🎂</OutcomeBox>
+                <OutcomeBox>
+                  <div>🎉 💖 🏖️</div>
+                  <div>😽 👩‍❤️‍👨 🎂</div>
+                </OutcomeBox>
               </OutcomeBranch>
 
               <OutcomeBranch>
@@ -65,22 +76,27 @@ const MarriageProposalFlowchart: React.FC = () => {
                 <VerticalLine />
                 <div>Нет</div>
                 <ArrowDown />
-                <OutcomeBox isPositive={false}>😭🥀💔😔🚶‍♂️⚰️</OutcomeBox>
+                <OutcomeBox>
+                  <div>😭 🥀 💔</div>
+                  <div>😔 🚶‍♂️ ⚰️</div>
+                </OutcomeBox>
               </OutcomeBranch>
             </OutcomesContainer>
-          </DelayedBlock>
+          </DelayedFadeInBlock>
 
-          <DelayedBlock delayMs={ANSWER_DELAY_MS}>
-            <InputContainer>
-              <Input
+          <DelayedFadeInBlock delayMs={ANSWER_DELAY_MS}>
+            <InlineInputContainer>
+              <InlineInput
                 type="text"
                 placeholder='Введи "да" чтобы продложить'
                 value={userInput}
                 onChange={(e) => setUserInput(e.target.value)}
               />
-              <ConfirmButton onClick={handleConfirm}>Подтвердить</ConfirmButton>
-            </InputContainer>
-          </DelayedBlock>
+              <IconButton onClick={handleConfirm}>
+                <PaperPlaneIcon />
+              </IconButton>
+            </InlineInputContainer>
+          </DelayedFadeInBlock>
         </FlowchartContainer>
       </AppContainer>
     </>

@@ -36,7 +36,7 @@ interface Props {
 const Typewriter: React.FC<Props> = ({ text, speed }) => {
   const displayText = useTypewriter(text, speed);
 
-  return <p>{displayText}</p>;
+  return <div>{displayText}</div>;
 };
 
 export default Typewriter;
