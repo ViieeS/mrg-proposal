@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -6,6 +6,10 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     background-color: #f0f2f5;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
   }
 `;
 
