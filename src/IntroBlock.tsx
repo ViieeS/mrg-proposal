@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
 const IntroBlockContainer = styled.div`
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-style: italic;
+  font-family: Helvetica, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
 `;
 
 const IntroBlock: React.FC = () => {

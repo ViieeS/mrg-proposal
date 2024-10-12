@@ -55,7 +55,7 @@ const MarriageProposalFlowchart: React.FC = () => {
           <DelayedBlock delayMs={PROPOSAL_DELAY_MS}>
             <ProposalBox>
               <Typewriter
-                text="Викуся, ты выйдешь за меня?"
+                text="Викуся, ты выйдешь за меня? 💍"
                 speed={200}
                 onFinish={finishProposalTyping}
               />
@@ -90,8 +90,16 @@ const MarriageProposalFlowchart: React.FC = () => {
                   <div>Нет</div>
                   <ArrowDown />
                   <OutcomeBox>
-                    <div>😭 🥀 💔</div>
-                    <div>😔 🚶‍♂️ ⚰️</div>
+                    <div>
+                      <span>😭</span>
+                      <span>🥀</span>
+                      <span>💔</span>
+                    </div>
+                    <div>
+                      <span>😔</span>
+                      <span>🚶‍♂️</span>
+                      <span>⚰️</span>
+                    </div>
                   </OutcomeBox>
                 </OutcomeBranch>
               </OutcomesContainer>

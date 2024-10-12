@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const InlineInputContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 45px;
+  margin-top: 30px;
   width: 100%;
   border: 2px solid #0088cc;
   border-radius: 12px;
