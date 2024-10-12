@@ -23,9 +23,12 @@ import PaperPlaneIcon from "./PaperPlaneIcon";
 import ProposalBox from "./ProposalBox";
 import Typewriter from "./Typewriter";
 import VerticalLine from "./VerticalLine";
+import RenderIf from "./RenderIf";
+import useProposalTypingState from "./useProposalTypingState";
 
 const MarriageProposalFlowchart: React.FC = () => {
   const [userInput, setUserInput] = useState("");
+  const [isProposalTyped, finishProposalTyping] = useProposalTypingState();
   const [showMeme, setShowMeme] = useState(false);
 
   const handleConfirm = () => {
@@ -54,49 +57,55 @@ const MarriageProposalFlowchart: React.FC = () => {
 
           <DelayedBlock delayMs={PROPOSAL_DELAY_MS}>
             <ProposalBox>
-              <Typewriter text="Викуся, ты выйдешь за меня?" speed={40} />
+              <Typewriter
+                text="Викуся, ты выйдешь за меня?"
+                speed={150}
+                onFinish={finishProposalTyping}
+              />
             </ProposalBox>
           </DelayedBlock>
 
-          <DelayedFadeInBlock delayMs={OUTCOMES_DELAY_MS}>
-            <OutcomesContainer>
-              <OutcomeBranch>
-                {/* Yes branch */}
-                <VerticalLine />
-                <div>Да</div>
-                <ArrowDown />
-                <OutcomeBox>
-                  <div>🎉 💖 🏖️</div>
-                  <div>😽 👩‍❤️‍👨 🎂</div>
-                </OutcomeBox>
-              </OutcomeBranch>
+          <RenderIf value={isProposalTyped}>
+            <DelayedFadeInBlock delayMs={OUTCOMES_DELAY_MS}>
+              <OutcomesContainer>
+                <OutcomeBranch>
+                  {/* Yes branch */}
+                  <VerticalLine />
+                  <div>Да</div>
+                  <ArrowDown />
+                  <OutcomeBox>
+                    <div>🎉 💖 🏖️</div>
+                    <div>😽 👩‍❤️‍👨 🎂</div>
+                  </OutcomeBox>
+                </OutcomeBranch>
 
-              <OutcomeBranch>
-                {/* No branch */}
-                <VerticalLine />
-                <div>Нет</div>
-                <ArrowDown />
-                <OutcomeBox>
-                  <div>😭 🥀 💔</div>
-                  <div>😔 🚶‍♂️ ⚰️</div>
-                </OutcomeBox>
-              </OutcomeBranch>
-            </OutcomesContainer>
-          </DelayedFadeInBlock>
+                <OutcomeBranch>
+                  {/* No branch */}
+                  <VerticalLine />
+                  <div>Нет</div>
+                  <ArrowDown />
+                  <OutcomeBox>
+                    <div>😭 🥀 💔</div>
+                    <div>😔 🚶‍♂️ ⚰️</div>
+                  </OutcomeBox>
+                </OutcomeBranch>
+              </OutcomesContainer>
+            </DelayedFadeInBlock>
 
-          <DelayedFadeInBlock delayMs={ANSWER_DELAY_MS}>
-            <InlineInputContainer>
-              <InlineInput
-                type="text"
-                placeholder='Введи "да" чтобы продложить'
-                value={userInput}
-                onChange={(e) => setUserInput(e.target.value)}
-              />
-              <IconButton onClick={handleConfirm}>
-                <PaperPlaneIcon />
-              </IconButton>
-            </InlineInputContainer>
-          </DelayedFadeInBlock>
+            <DelayedFadeInBlock delayMs={ANSWER_DELAY_MS}>
+              <InlineInputContainer>
+                <InlineInput
+                  type="text"
+                  placeholder='Введи "да" чтобы продложить'
+                  value={userInput}
+                  onChange={(e) => setUserInput(e.target.value)}
+                />
+                <IconButton onClick={handleConfirm}>
+                  <PaperPlaneIcon />
+                </IconButton>
+              </InlineInputContainer>
+            </DelayedFadeInBlock>
+          </RenderIf>
         </FlowchartContainer>
       </AppContainer>
     </>
