@@ -111,6 +111,7 @@ const MarriageProposalFlowchart: React.FC = () => {
                   type="text"
                   placeholder='Введи "да" чтобы продложить'
                   value={userInput}
+                  autoComplete="off"
                   onChange={(e) => setUserInput(e.target.value)}
                 />
                 <IconButton onClick={handleConfirm}>
