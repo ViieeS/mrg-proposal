@@ -6,11 +6,7 @@ const IconButton = styled.button`
   cursor: pointer;
   font-size: 0;
   padding: 5px;
-
-  &:hover {
-    opacity: 0.8;
-  }
-
+  background: none;
   transition: all 0.3s ease-in-out;
 `;
 

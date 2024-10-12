@@ -16,15 +16,16 @@ import FlowchartContainer from "./FlowchartContainer";
 import IconButton from "./IconButton";
 import InlineInput from "./InlineInput";
 import InlineInputContainer from "./InlineInputContainer";
+import IntroBlock from "./IntroBlock";
 import OutcomeBox from "./OutcomeBox";
 import OutcomeBranch from "./OutcomeBranch";
 import OutcomesContainer from "./OutcomesContainer";
 import PaperPlaneIcon from "./PaperPlaneIcon";
 import ProposalBox from "./ProposalBox";
-import Typewriter from "./Typewriter";
-import VerticalLine from "./VerticalLine";
 import RenderIf from "./RenderIf";
+import Typewriter from "./Typewriter";
 import useProposalTypingState from "./useProposalTypingState";
+import VerticalLine from "./VerticalLine";
 
 const MarriageProposalFlowchart: React.FC = () => {
   const [userInput, setUserInput] = useState("");
@@ -35,7 +36,7 @@ const MarriageProposalFlowchart: React.FC = () => {
     if (checkAnswer(userInput)) {
       setShowMeme(true);
     } else {
-      alert('⛔ Нужно ввести "да" для подтверждения!');
+      alert('⛔ Нужно ввести "да"!');
     }
   };
 
@@ -48,18 +49,14 @@ const MarriageProposalFlowchart: React.FC = () => {
       <AppContainer>
         <FlowchartContainer>
           <DelayedFadeInBlock delayMs={INTRO_DELAY_MS}>
-            <p style={{ fontStyle: "italic" }}>
-              Мы прошли тысячи километров навстречу друг другу, и я хочу
-              продолжить этот путь вместе с тобой. Давай превратить нашу жизнь в
-              бесконечное путешествие!
-            </p>
+            <IntroBlock />
           </DelayedFadeInBlock>
 
           <DelayedBlock delayMs={PROPOSAL_DELAY_MS}>
             <ProposalBox>
               <Typewriter
                 text="Викуся, ты выйдешь за меня?"
-                speed={150}
+                speed={200}
                 onFinish={finishProposalTyping}
               />
             </ProposalBox>
@@ -74,8 +71,16 @@ const MarriageProposalFlowchart: React.FC = () => {
                   <div>Да</div>
                   <ArrowDown />
                   <OutcomeBox>
-                    <div>🎉 💖 🏖️</div>
-                    <div>😽 👩‍❤️‍👨 🎂</div>
+                    <div>
+                      <span>🎉</span>
+                      <span>🍓</span>
+                      <span>😻</span>
+                    </div>
+                    <div>
+                      <span>🏖️</span>
+                      <span>👩🏼‍❤️‍💋‍👨🏼</span>
+                      <span>🍰</span>
+                    </div>
                   </OutcomeBox>
                 </OutcomeBranch>
 

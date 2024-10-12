@@ -12,7 +12,7 @@ const DelayedFadeInBlock: React.FC<React.PropsWithChildren<Props>> = ({
 }) => {
   const isVisible = useTimer(delayMs);
 
-  return <FadeInBlock isVisible={isVisible}>{children}</FadeInBlock>;
+  return <FadeInBlock $isVisible={isVisible}>{children}</FadeInBlock>;
 };
 
 export default DelayedFadeInBlock;
