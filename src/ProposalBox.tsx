@@ -7,7 +7,7 @@ const ProposalBox = styled.div`
   padding: 1rem;
   border-radius: 12px;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   margin-bottom: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 `;
