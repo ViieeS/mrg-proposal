@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import Input from './Input';
-import ConfirmButton from './ConfirmButton';
-import InputContainer from './InputContainer';
-import validatePassword from './validatePassword';
-import LockIcon from './LockIcon';
-import senitizeSpecialСharacters from './senitizeSpecialCharacters';
+import React, { useState } from "react";
+import styled from "styled-components";
+import Input from "./Input";
+import ConfirmButton from "./ConfirmButton";
+import InputContainer from "./InputContainer";
+import validatePassword from "./validatePassword";
+import LockIcon from "./LockIcon";
+import senitizeSpecialСharacters from "./senitizeSpecialCharacters";
 
 // Styled components
 const Wrapper = styled.div`
@@ -33,7 +33,7 @@ interface Props {
 }
 
 const PasswordScreen: React.FC<Props> = ({ onPasswordValid }) => {
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState("");
 
   const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value);
@@ -44,7 +44,7 @@ const PasswordScreen: React.FC<Props> = ({ onPasswordValid }) => {
     if (await validatePassword(senitizedPassword)) {
       onPasswordValid();
     } else {
-      alert('Не угадала 😜');
+      alert("Не угадала 😜");
     }
   };
 
@@ -52,13 +52,16 @@ const PasswordScreen: React.FC<Props> = ({ onPasswordValid }) => {
     <Wrapper>
       <LockIcon />
       <Container>
-        <Label htmlFor="password">Enter Password:</Label>
+        <Label htmlFor="secure-input">Enter Password:</Label>
         <InputContainer>
           <Input
-            type="password"
-            id="password"
+            type="text"
+            id="secure-input"
             placeholder="**********"
             value={password}
+            style={{
+              WebkitTextSecurity: "disc",
+            } as React.CSSProperties}
             onChange={handlePasswordChange}
           />
           <ConfirmButton onClick={handleConfirm}>Подтвердить</ConfirmButton>
