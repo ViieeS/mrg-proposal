@@ -49,17 +49,17 @@ Error generating stack: `+o.message+`
   width: 40px;
   height: 40px;
   margin: 10px 0;
-`,Ea=()=>v.jsxs(dd,{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:[v.jsx("line",{x1:"12",y1:"5",x2:"12",y2:"19"}),v.jsx("polyline",{points:"19 12 12 19 5 12"})]}),W0=e=>e.replace(/[^а-яА-ЯёЁ]/g,""),H0=e=>(e=W0(e),e.toLowerCase()==="да"),Q0="/mrg-proposal",Y0=100,K0=9500,G0=2e3,X0=6e3,Z0=()=>v.jsx("audio",{src:`${Q0}/nyancat.mp3`,loop:!0,autoPlay:!0,preload:"auto"}),J0=()=>v.jsxs(v.Fragment,{children:[v.jsxs("div",{className:"wrapper",children:[v.jsx("div",{className:"rainbow",children:v.jsx("div",{className:"sprite"})}),v.jsxs("ul",{className:"stars",children:[v.jsx("li",{children:v.jsx("i",{})}),v.jsx("li",{children:v.jsx("i",{})}),v.jsx("li",{children:v.jsx("i",{})}),v.jsx("li",{children:v.jsx("i",{})}),v.jsx("li",{children:v.jsx("i",{})}),v.jsx("li",{children:v.jsx("i",{})}),v.jsx("li",{children:v.jsx("i",{})}),v.jsx("li",{children:v.jsx("i",{})}),v.jsx("li",{children:v.jsx("i",{})}),v.jsx("li",{children:v.jsx("i",{})}),v.jsx("li",{children:v.jsx("i",{})}),v.jsx("li",{children:v.jsx("i",{})})]}),v.jsxs("div",{className:"cat",children:[v.jsx("div",{className:"finn-and-jake"}),v.jsx("div",{className:"tail",children:v.jsx("div",{className:"sprite"})}),v.jsx("div",{className:"feet",children:v.jsx("div",{className:"sprite"})}),v.jsx("div",{className:"poptart"}),v.jsx("div",{className:"head"})]})]}),v.jsx(Z0,{})]}),qi=e=>e.value?v.jsx(v.Fragment,{children:e.children}):null,pd=(e=0)=>{const[t,n]=fe.useState(!1);return fe.useEffect(()=>{const r=setTimeout(()=>{n(!0)},e);return()=>clearTimeout(r)},[e]),t},q0=({delayMs:e=0,children:t})=>{const n=pd(e);return v.jsx(qi,{value:n,children:t})},b0=q.div`
+`,Ea=()=>v.jsxs(dd,{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:[v.jsx("line",{x1:"12",y1:"5",x2:"12",y2:"19"}),v.jsx("polyline",{points:"19 12 12 19 5 12"})]}),W0=e=>e.replace(/[^а-яА-ЯёЁ]/g,""),H0=e=>(e=W0(e),e.toLowerCase()==="да"),Q0="/mrg-proposal",Y0=100,K0=1e3,G0=2e3,X0=6e3,Z0=()=>v.jsx("audio",{src:`${Q0}/nyancat.mp3`,loop:!0,autoPlay:!0,preload:"auto"}),J0=()=>v.jsxs(v.Fragment,{children:[v.jsxs("div",{className:"wrapper",children:[v.jsx("div",{className:"rainbow",children:v.jsx("div",{className:"sprite"})}),v.jsxs("ul",{className:"stars",children:[v.jsx("li",{children:v.jsx("i",{})}),v.jsx("li",{children:v.jsx("i",{})}),v.jsx("li",{children:v.jsx("i",{})}),v.jsx("li",{children:v.jsx("i",{})}),v.jsx("li",{children:v.jsx("i",{})}),v.jsx("li",{children:v.jsx("i",{})}),v.jsx("li",{children:v.jsx("i",{})}),v.jsx("li",{children:v.jsx("i",{})}),v.jsx("li",{children:v.jsx("i",{})}),v.jsx("li",{children:v.jsx("i",{})}),v.jsx("li",{children:v.jsx("i",{})}),v.jsx("li",{children:v.jsx("i",{})})]}),v.jsxs("div",{className:"cat",children:[v.jsx("div",{className:"finn-and-jake"}),v.jsx("div",{className:"tail",children:v.jsx("div",{className:"sprite"})}),v.jsx("div",{className:"feet",children:v.jsx("div",{className:"sprite"})}),v.jsx("div",{className:"poptart"}),v.jsx("div",{className:"head"})]})]}),v.jsx(Z0,{})]}),qi=e=>e.value?v.jsx(v.Fragment,{children:e.children}):null,pd=(e=0)=>{const[t,n]=fe.useState(!1);return fe.useEffect(()=>{const r=setTimeout(()=>{n(!0)},e);return()=>clearTimeout(r)},[e]),t},q0=({delayMs:e=0,children:t})=>{const n=pd(e);return v.jsx(qi,{value:n,children:t})},b0=q.div`
   opacity: ${e=>e.$isVisible?1:0};
   transform: ${e=>e.$isVisible?"translateY(0)":"translateY(-20px)"};
   transition: opacity 0.5s ease, transform 0.5s ease;
-`,ll=({delayMs:e=0,children:t})=>{const n=pd(e);return v.jsx(b0,{$isVisible:n,children:t})},em=q.div`
+`,ll=({delayMs:e=0,children:t})=>{const n=pd(e);return v.jsx(b0,{$isVisible:n,children:t})},e1=q.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   max-width: 600px;
-`,tm=q.button`
+`,t1=q.button`
   border: none;
   border-radius: 25px;
   cursor: pointer;
@@ -67,7 +67,7 @@ Error generating stack: `+o.message+`
   padding: 5px;
   background: none;
   transition: all 0.3s ease-in-out;
-`,nm=q.input`
+`,n1=q.input`
   width: 300px;
   padding: 10px;
   padding-right: 5px;
@@ -80,7 +80,7 @@ Error generating stack: `+o.message+`
   &:focus {
     border-color: #005f99;
   }
-`,rm=q.div`
+`,r1=q.div`
   display: flex;
   justify-content: center;
   margin-top: 30px;
@@ -89,12 +89,12 @@ Error generating stack: `+o.message+`
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background: #fff;
-`,lm=q.div`
+`,l1=q.div`
   margin-bottom: 30px;
   font-family: cursive, serif;
   font-size: 18px;
   line-height: 1.4;
-`,om=()=>v.jsxs(lm,{children:[v.jsxs("div",{children:[v.jsxs("p",{children:["« Мы прошли тысячи километров навстречу друг другу, и я хочу продолжить этот путь ",v.jsx("b",{children:"вместе с тобой"}),"."]}),v.jsxs("p",{children:["Давай превратить нашу жизнь в ",v.jsx("b",{children:"бесконечное путешествие"}),"! »"]})]}),v.jsx("div",{style:{textAlign:"right"},children:"— твой Валерочка"})]}),Ca=q.div`
+`,o1=()=>v.jsxs(l1,{children:[v.jsxs("div",{children:[v.jsxs("p",{children:["« Мы прошли тысячи километров навстречу друг другу, и я хочу продолжить этот путь ",v.jsx("b",{children:"вместе с тобой"}),"."]}),v.jsxs("p",{children:["Давай превратить нашу жизнь в ",v.jsx("b",{children:"бесконечное путешествие"}),"! »"]})]}),v.jsx("div",{style:{textAlign:"right"},children:"— твой Валерочка"})]}),Ca=q.div`
   border-radius: 8px;
   padding: 10px;
   text-align: center;
@@ -109,11 +109,11 @@ Error generating stack: `+o.message+`
   flex-direction: column;
   align-items: center;
   font-size: 1.5rem;
-`,im=q.div`
+`,i1=q.div`
   width: 100%;
   display: flex;
   gap: 60px;
-`,um=()=>v.jsxs("svg",{width:"40px",height:"40px",viewBox:"0 0 28 28",version:"1.1",xmlns:"http://www.w3.org/2000/svg",children:[v.jsx("title",{children:"ic_fluent_send_28_filled"}),v.jsx("g",{id:"🔍-Product-Icons",stroke:"none",strokeWidth:"1",fill:"none",fillRule:"evenodd",children:v.jsx("g",{id:"ic_fluent_send_28_filled",fill:"#0088cc",fillRule:"nonzero",children:v.jsx("path",{d:"M3.78963301,2.77233335 L24.8609339,12.8499121 C25.4837277,13.1477699 25.7471402,13.8941055 25.4492823,14.5168992 C25.326107,14.7744476 25.1184823,14.9820723 24.8609339,15.1052476 L3.78963301,25.1828263 C3.16683929,25.4806842 2.42050372,25.2172716 2.12264586,24.5944779 C1.99321184,24.3238431 1.96542524,24.015685 2.04435886,23.7262618 L4.15190935,15.9983421 C4.204709,15.8047375 4.36814355,15.6614577 4.56699265,15.634447 L14.7775879,14.2474874 C14.8655834,14.2349166 14.938494,14.177091 14.9721837,14.0981464 L14.9897199,14.0353553 C15.0064567,13.9181981 14.9390703,13.8084248 14.8334007,13.7671556 L14.7775879,13.7525126 L4.57894108,12.3655968 C4.38011873,12.3385589 4.21671819,12.1952832 4.16392965,12.0016992 L2.04435886,4.22889788 C1.8627142,3.56286745 2.25538645,2.87569101 2.92141688,2.69404635 C3.21084015,2.61511273 3.51899823,2.64289932 3.78963301,2.77233335 Z",id:"🎨-Color"})})})]}),sm=q.div`
+`,u1=()=>v.jsxs("svg",{width:"40px",height:"40px",viewBox:"0 0 28 28",version:"1.1",xmlns:"http://www.w3.org/2000/svg",children:[v.jsx("title",{children:"ic_fluent_send_28_filled"}),v.jsx("g",{id:"🔍-Product-Icons",stroke:"none",strokeWidth:"1",fill:"none",fillRule:"evenodd",children:v.jsx("g",{id:"ic_fluent_send_28_filled",fill:"#0088cc",fillRule:"nonzero",children:v.jsx("path",{d:"M3.78963301,2.77233335 L24.8609339,12.8499121 C25.4837277,13.1477699 25.7471402,13.8941055 25.4492823,14.5168992 C25.326107,14.7744476 25.1184823,14.9820723 24.8609339,15.1052476 L3.78963301,25.1828263 C3.16683929,25.4806842 2.42050372,25.2172716 2.12264586,24.5944779 C1.99321184,24.3238431 1.96542524,24.015685 2.04435886,23.7262618 L4.15190935,15.9983421 C4.204709,15.8047375 4.36814355,15.6614577 4.56699265,15.634447 L14.7775879,14.2474874 C14.8655834,14.2349166 14.938494,14.177091 14.9721837,14.0981464 L14.9897199,14.0353553 C15.0064567,13.9181981 14.9390703,13.8084248 14.8334007,13.7671556 L14.7775879,13.7525126 L4.57894108,12.3655968 C4.38011873,12.3385589 4.21671819,12.1952832 4.16392965,12.0016992 L2.04435886,4.22889788 C1.8627142,3.56286745 2.25538645,2.87569101 2.92141688,2.69404635 C3.21084015,2.61511273 3.51899823,2.64289932 3.78963301,2.77233335 Z",id:"🎨-Color"})})})]}),s1=q.div`
   min-width: 350px;
   background-color: #ffffff;
   border: 2px solid #0088cc;
@@ -131,7 +131,7 @@ Error generating stack: `+o.message+`
     flex-grow: 0; /* Prevent growing */
     flex-basis: auto; /* Width based on content */
   }
-`,am=(e,t=50,n)=>{const[r,l]=fe.useState("");return fe.useEffect(()=>{let o=0;const i=setInterval(()=>{if(o<e.length){let u=e.substring(0,o+1);o+1!==e.length&&(u+="|"),l(u),o++}else clearInterval(i),n==null||n()},t);return()=>{clearInterval(i)}},[e,t,n]),r},cm=({text:e,speed:t,onFinish:n})=>{const r=am(e,t,n);return v.jsx("div",{children:r})},fm=()=>{const[e,t]=fe.useState(!1),n=fe.useCallback(()=>{t(!0)},[]);return[e,n]},Pa=()=>v.jsx(dd,{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:v.jsx("line",{x1:"12",y1:"5",x2:"12",y2:"19"})}),dm=()=>{const[e,t]=fe.useState(""),[n,r]=fm(),[l,o]=fe.useState(!1),i=()=>{H0(e)?o(!0):alert('⛔ Нужно ввести "да"!')};return l?v.jsx(J0,{}):v.jsx(v.Fragment,{children:v.jsx(V0,{children:v.jsxs(em,{children:[v.jsx(ll,{delayMs:Y0,children:v.jsx(om,{})}),v.jsx(q0,{delayMs:K0,children:v.jsxs(sm,{children:[v.jsx(cm,{text:"Викуся, ты выйдешь за меня?",speed:200,onFinish:r}),v.jsx(qi,{value:n,children:v.jsx(ll,{delayMs:5,children:v.jsx("div",{style:{marginLeft:"5px"},children:"💍"})})})]})}),v.jsxs(qi,{value:n,children:[v.jsx(ll,{delayMs:G0,children:v.jsxs(im,{children:[v.jsxs(_a,{children:[v.jsx(Pa,{}),v.jsx("div",{children:"Да"}),v.jsx(Ea,{}),v.jsxs(Ca,{children:[v.jsxs("div",{children:[v.jsx("span",{children:"🎉"}),v.jsx("span",{children:"🍓"}),v.jsx("span",{children:"😻"})]}),v.jsxs("div",{children:[v.jsx("span",{children:"🏖️"}),v.jsx("span",{children:"👩🏼‍❤️‍💋‍👨🏼"}),v.jsx("span",{children:"🍰"})]})]})]}),v.jsxs(_a,{children:[v.jsx(Pa,{}),v.jsx("div",{children:"Нет"}),v.jsx(Ea,{}),v.jsxs(Ca,{children:[v.jsxs("div",{children:[v.jsx("span",{children:"😭"}),v.jsx("span",{children:"🥀"}),v.jsx("span",{children:"💔"})]}),v.jsxs("div",{children:[v.jsx("span",{children:"😔"}),v.jsx("span",{children:"🚶‍♂️"}),v.jsx("span",{children:"⚰️"})]})]})]})]})}),v.jsx(ll,{delayMs:X0,children:v.jsxs(rm,{children:[v.jsx(nm,{type:"text",placeholder:'Введи "да" чтобы продложить',value:e,autoComplete:"off",onChange:u=>t(u.target.value)}),v.jsx(tm,{onClick:i,children:v.jsx(um,{})})]})})]})]})})})},pm=U0`
+`,a1=(e,t=50,n)=>{const[r,l]=fe.useState("");return fe.useEffect(()=>{let o=0;const i=setInterval(()=>{if(o<e.length){let u=e.substring(0,o+1);o+1!==e.length&&(u+="|"),l(u),o++}else clearInterval(i),n==null||n()},t);return()=>{clearInterval(i)}},[e,t,n]),r},c1=({text:e,speed:t,onFinish:n})=>{const r=a1(e,t,n);return v.jsx("div",{children:r})},f1=()=>{const[e,t]=fe.useState(!1),n=fe.useCallback(()=>{t(!0)},[]);return[e,n]},Pa=()=>v.jsx(dd,{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:v.jsx("line",{x1:"12",y1:"5",x2:"12",y2:"19"})}),d1=()=>{const[e,t]=fe.useState(""),[n,r]=f1(),[l,o]=fe.useState(!1),i=()=>{H0(e)?o(!0):alert('⛔ Нужно ввести "да"!')};return l?v.jsx(J0,{}):v.jsx(v.Fragment,{children:v.jsx(V0,{children:v.jsxs(e1,{children:[v.jsx(ll,{delayMs:Y0,children:v.jsx(o1,{})}),v.jsx(q0,{delayMs:K0,children:v.jsxs(s1,{children:[v.jsx(c1,{text:"Викуся, ты выйдешь за меня?",speed:200,onFinish:r}),v.jsx(qi,{value:n,children:v.jsx(ll,{delayMs:5,children:v.jsx("div",{style:{marginLeft:"5px"},children:"💍"})})})]})}),v.jsxs(qi,{value:n,children:[v.jsx(ll,{delayMs:G0,children:v.jsxs(i1,{children:[v.jsxs(_a,{children:[v.jsx(Pa,{}),v.jsx("div",{children:"Да"}),v.jsx(Ea,{}),v.jsxs(Ca,{children:[v.jsxs("div",{children:[v.jsx("span",{children:"🎉"}),v.jsx("span",{children:"🍓"}),v.jsx("span",{children:"😻"})]}),v.jsxs("div",{children:[v.jsx("span",{children:"🏖️"}),v.jsx("span",{children:"👩🏼‍❤️‍💋‍👨🏼"}),v.jsx("span",{children:"🍰"})]})]})]}),v.jsxs(_a,{children:[v.jsx(Pa,{}),v.jsx("div",{children:"Нет"}),v.jsx(Ea,{}),v.jsxs(Ca,{children:[v.jsxs("div",{children:[v.jsx("span",{children:"😭"}),v.jsx("span",{children:"🥀"}),v.jsx("span",{children:"💔"})]}),v.jsxs("div",{children:[v.jsx("span",{children:"😔"}),v.jsx("span",{children:"🚶‍♂️"}),v.jsx("span",{children:"⚰️"})]})]})]})]})}),v.jsx(ll,{delayMs:X0,children:v.jsxs(r1,{children:[v.jsx(n1,{type:"text",placeholder:'Введи "да" чтобы продложить',value:e,autoComplete:"off",onChange:u=>t(u.target.value)}),v.jsx(t1,{onClick:i,children:v.jsx(u1,{})})]})})]})]})})})},p1=U0`
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
@@ -142,7 +142,7 @@ Error generating stack: `+o.message+`
   *, *::before, *::after {
     box-sizing: border-box;
   }
-`,hm=q.button`
+`,h1=q.button`
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
@@ -157,7 +157,7 @@ Error generating stack: `+o.message+`
   }
 
   transition: all 0.3s ease-in-out;
-`,mm=q.input`
+`,m1=q.input`
   width: 300px;
   padding: 0.75rem;
   font-size: 1.25rem;
@@ -170,15 +170,15 @@ Error generating stack: `+o.message+`
   &:focus {
     border-color: #005f99;
   }
-`,vm=q.div`
+`,v1=q.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-`,ym=q.div`
+`,y1=q.div`
   font-size: 84px;
   margin-bottom: 20px;
-`,gm=()=>v.jsx(ym,{children:"🔐"}),wm=B0`
+`,g1=()=>v.jsx(y1,{children:"🔐"}),w1=B0`
   0% {
     text-shadow:
       0 0 2px #fff,
@@ -202,7 +202,7 @@ Error generating stack: `+o.message+`
       0 0 100px #bc13fe,
       0 0 150px #bc13fe;
   }
-`,Sm=q.h1`
+`,S1=q.h1`
   font-size: 4rem;
   font-family: "Dancing Script", "Helvetica", cursive, serif;
   border: 0.2rem solid #fff;
@@ -211,8 +211,8 @@ Error generating stack: `+o.message+`
   margin-bottom: 80px;
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
     0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
-  animation: ${wm} 1.5s infinite alternate;
-`,xm=e=>e.replace(/[^\w\s]/gi,"");async function km(e){const n=new TextEncoder().encode(e),r=await crypto.subtle.digest("SHA-256",n);return Array.from(new Uint8Array(r)).map(l=>l.toString(16).padStart(2,"0")).join("")}const Em="a464c1e9f842b3db75bca8c898ba037c7bcef8fa3901c6aa12795d0ddbcd6c61",Cm=async e=>await km(e)===Em,_m=q.div`
+  animation: ${w1} 1.5s infinite alternate;
+`,x1=e=>e.replace(/[^\w\s]/gi,"");async function k1(e){const n=new TextEncoder().encode(e),r=await crypto.subtle.digest("SHA-256",n);return Array.from(new Uint8Array(r)).map(l=>l.toString(16).padStart(2,"0")).join("")}const E1="a464c1e9f842b3db75bca8c898ba037c7bcef8fa3901c6aa12795d0ddbcd6c61",C1=async e=>await k1(e)===E1,_1=q.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -220,9 +220,9 @@ Error generating stack: `+o.message+`
   height: 100vh;
   background-color: #000;
   color: #fff;
-`,Pm=q.div`
+`,P1=q.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-`,Nm=({onPasswordValid:e})=>{const[t,n]=fe.useState(""),r=o=>{n(o.target.value)},l=async()=>{const o=xm(t);await Cm(o)?e():alert("Не угадала 😜")};return v.jsxs(_m,{children:[v.jsx(Sm,{children:"V+V"}),v.jsx(gm,{}),v.jsx(Pm,{children:v.jsxs(vm,{children:[v.jsx(mm,{type:"text",id:"secure-input",placeholder:"**********",value:t,style:{WebkitTextSecurity:"disc"},onChange:r}),v.jsx(hm,{onClick:l,children:"Подтвердить"})]})})]})},jm=({children:e})=>{const[t,n]=fe.useState(!1),r=()=>{n(!0)};return t?e:v.jsx(Nm,{onPasswordValid:r})},zm=()=>v.jsxs(v.Fragment,{children:[v.jsx(pm,{}),v.jsx("div",{className:"App",children:v.jsx(jm,{children:v.jsx(dm,{})})})]});Uf(document.getElementById("root")).render(v.jsx(fe.StrictMode,{children:v.jsx(zm,{})}));
+`,N1=({onPasswordValid:e})=>{const[t,n]=fe.useState(""),r=o=>{n(o.target.value)},l=async()=>{const o=x1(t);await C1(o)?e():alert("Не угадала 😜")};return v.jsxs(_1,{children:[v.jsx(S1,{children:"V+V"}),v.jsx(g1,{}),v.jsx(P1,{children:v.jsxs(v1,{children:[v.jsx(m1,{type:"text",id:"secure-input",placeholder:"**********",value:t,style:{WebkitTextSecurity:"disc"},onChange:r}),v.jsx(h1,{onClick:l,children:"Подтвердить"})]})})]})},j1=({children:e})=>{const[t,n]=fe.useState(!1),r=()=>{n(!0)};return t?e:v.jsx(N1,{onPasswordValid:r})},z1=()=>v.jsxs(v.Fragment,{children:[v.jsx(p1,{}),v.jsx("div",{className:"App",children:v.jsx(j1,{children:v.jsx(d1,{})})})]});Uf(document.getElementById("root")).render(v.jsx(fe.StrictMode,{children:v.jsx(z1,{})}));
