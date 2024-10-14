@@ -3,19 +3,24 @@ import styled from "styled-components";
 const IntroBlockContainer = styled.div`
   margin-bottom: 30px;
   font-style: italic;
-  font-family: Helvetica, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
+  font-family: cursive, serif;
+  font-size: 18px;
+  line-height: 1.4;
 `;
 
 const IntroBlock: React.FC = () => {
   return (
     <IntroBlockContainer>
-      <p>
-        Мы прошли тысячи километров навстречу друг другу, и я хочу продолжить
-        этот путь вместе с тобой.
-      </p>
-      <p>Давай превратить нашу жизнь в бесконечное путешествие!</p>
+      <div>
+        <p>
+          « Мы прошли тысячи километров навстречу друг другу, и я хочу
+          продолжить этот путь <b>вместе с тобой</b>.
+        </p>
+        <p>
+          Давай превратить нашу жизнь в <b>бесконечное путешествие</b>! »
+        </p>
+      </div>
+      <div style={{ textAlign: "right" }}>— твой Валерочка</div>
     </IntroBlockContainer>
   );
 };

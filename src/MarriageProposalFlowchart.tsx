@@ -55,10 +55,15 @@ const MarriageProposalFlowchart: React.FC = () => {
           <DelayedBlock delayMs={PROPOSAL_DELAY_MS}>
             <ProposalBox>
               <Typewriter
-                text="Викуся, ты выйдешь за меня? 💍"
+                text="Викуся, ты выйдешь за меня?"
                 speed={200}
                 onFinish={finishProposalTyping}
               />
+              <RenderIf value={isProposalTyped}>
+                <DelayedFadeInBlock delayMs={5}>
+                  <div style={{ marginLeft: "5px" }}>💍</div>
+                </DelayedFadeInBlock>
+              </RenderIf>
             </ProposalBox>
           </DelayedBlock>
 
