@@ -24,11 +24,6 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  width: 250px;
-`;
-
-const Label = styled.label`
-  font-weight: bold;
 `;
 
 interface Props {
@@ -56,7 +51,6 @@ const PasswordScreen: React.FC<Props> = ({ onPasswordValid }) => {
       <PasswordScreenTitle>V+V</PasswordScreenTitle>
       <LockIcon />
       <Container>
-        <Label htmlFor="secure-input">Пароль:</Label>
         <InputContainer>
           <Input
             type="text"
