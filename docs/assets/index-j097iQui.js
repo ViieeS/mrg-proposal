@@ -91,7 +91,6 @@ Error generating stack: `+o.message+`
   background: #fff;
 `,lm=q.div`
   margin-bottom: 30px;
-  font-style: italic;
   font-family: cursive, serif;
   font-size: 18px;
   line-height: 1.4;

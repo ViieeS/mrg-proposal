@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const IntroBlockContainer = styled.div`
   margin-bottom: 30px;
-  font-style: italic;
   font-family: cursive, serif;
   font-size: 18px;
   line-height: 1.4;
