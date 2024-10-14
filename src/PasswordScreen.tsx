@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Input from "./Input";
 import ConfirmButton from "./ConfirmButton";
+import Input from "./Input";
 import InputContainer from "./InputContainer";
-import validatePassword from "./validatePassword";
 import LockIcon from "./LockIcon";
+import PasswordScreenTitle from "./PasswordScreenTitle";
 import senitizeSpecialСharacters from "./senitizeSpecialCharacters";
+import validatePassword from "./validatePassword";
 
 // Styled components
 const Wrapper = styled.div`
@@ -14,6 +15,8 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-color: #000;
+  color: #fff;
 `;
 
 const Container = styled.div`
@@ -50,18 +53,21 @@ const PasswordScreen: React.FC<Props> = ({ onPasswordValid }) => {
 
   return (
     <Wrapper>
+      <PasswordScreenTitle>V+V</PasswordScreenTitle>
       <LockIcon />
       <Container>
-        <Label htmlFor="secure-input">Enter Password:</Label>
+        <Label htmlFor="secure-input">Пароль:</Label>
         <InputContainer>
           <Input
             type="text"
             id="secure-input"
             placeholder="**********"
             value={password}
-            style={{
-              WebkitTextSecurity: "disc",
-            } as React.CSSProperties}
+            style={
+              {
+                WebkitTextSecurity: "disc",
+              } as React.CSSProperties
+            }
             onChange={handlePasswordChange}
           />
           <ConfirmButton onClick={handleConfirm}>Подтвердить</ConfirmButton>
